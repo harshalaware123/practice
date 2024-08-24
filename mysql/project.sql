@@ -235,7 +235,11 @@ mysql> select * from master_client;
 | 100004    | ashwini joshi | banhalore |  560001 | karnataka   |      0 |
 | 100005    | hansel colaco | banglore  |  400060 | maharashtra |   2000 |
 | 100006    | deepak sharma | mangalore |  560050 | karnataka   |      0 |
-+-----------+---------------+-----------+---------+-------------+--------+
-5 rows in set (0.00 sec)
+
 
 mysql>
+create table student009(id int ,name varchar(10),
+contact varchar(10),
+course_id varchar(10), 
+constraint pk_stud_id primary key(id), 
+constraint fk_stud_course_id foreign key(course_id) references course(course_id));
